@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Code Translator & Verifier</title>
+  <link rel="stylesheet" href="/ui/styles.css"/>
+</head>
+<body>
+  <header><h1>Code Translator & Verifier</h1></header>
+  <main>
+    <form id="form">
+      <label>Source Language
+        <select id="source">
+          <option>python</option><option>java</option><option>c</option><option>cpp</option>
+        </select>
+      </label>
+      <label>Target Language
+        <select id="target">
+          <option>java</option><option>c</option><option>cpp</option><option>python</option>
+        </select>
+      </label>
+      <label>Function Name (optional)
+        <input id="fname" placeholder="e.g., fib"/>
+      </label>
+      <label>Source Code</label>
+      <textarea id="code" rows="12" placeholder="Paste your function here..."></textarea>
+      <button type="submit">Translate</button>
+    </form>
+    <section id="result" class="hidden">
+      <h2>Translated Code</h2>
+      <pre id="out"></pre>
+    </section>
+  </main>
+  <script src="/ui/app.js"></script>
+</body>
+</html>
