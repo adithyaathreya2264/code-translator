@@ -9,3 +9,5 @@ black
 ruff
 mypy
 pymongo    # optional; used only if you enable Mongo
+sentencepiece
+openai
