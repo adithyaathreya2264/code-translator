@@ -2,35 +2,116 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Code Translator & Verifier</title>
+  <title>AI Code Translator & Verifier</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <link rel="stylesheet" href="/ui/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header><h1>Code Translator & Verifier</h1></header>
-  <main>
-    <form id="form">
-      <label>Source Language
-        <select id="source">
-          <option>python</option><option>java</option><option>c</option><option>cpp</option>
-        </select>
-      </label>
-      <label>Target Language
-        <select id="target">
-          <option>java</option><option>c</option><option>cpp</option><option>python</option>
-        </select>
-      </label>
-      <label>Function Name (optional)
-        <input id="fname" placeholder="e.g., fib"/>
-      </label>
-      <label>Source Code</label>
-      <textarea id="code" rows="12" placeholder="Paste your function here..."></textarea>
-      <button type="submit">Translate</button>
-    </form>
-    <section id="result" class="hidden">
-      <h2>Translated Code</h2>
-      <pre id="out"></pre>
-    </section>
-  </main>
+  <header class="topbar">
+    <h1>AI Code Translator & Verifier</h1>
+    <div id="status" class="hidden"><span class="spinner"></span><span id="status-text">Working…</span></div>
+  </header>
+
+  <div class="layout">
+    <!-- Left: History Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h2>History</h2>
+        <button id="btn-refresh-history" class="secondary sm">Refresh</button>
+      </div>
+      <div id="history-list" class="history-list">
+        <!-- populated by app.js -->
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Toolbar -->
+      <section class="toolbar card">
+        <div class="row wrap gap">
+          <label>
+            Source
+            <select id="source">
+              <option>python</option>
+              <option>java</option>
+              <option>c</option>
+              <option>cpp</option>
+            </select>
+          </label>
+
+          <label>
+            Target
+            <select id="target">
+              <option>java</option>
+              <option>c</option>
+              <option>cpp</option>
+              <option>python</option>
+            </select>
+          </label>
+
+          <label class="grow">
+            Function Name
+            <input id="fname" placeholder="e.g., gcd" />
+          </label>
+
+          <label class="grow">
+            Custom Test Inputs (JSON, optional)
+            <input id="custom" placeholder='e.g., [[12,18],[0,5],[-4,6]]'/>
+          </label>
+
+          <div class="actions">
+            <button id="btn-translate" type="button">Translate</button>
+            <button id="btn-verify"   type="button" class="ghost">Translate & Verify</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editors -->
+      <section class="panes">
+        <div class="pane">
+          <div class="pane-head">
+            <h3>Source Code</h3>
+            <button id="btn-load-example" class="secondary sm">Example</button>
+          </div>
+          <textarea id="code" class="editor" spellcheck="false" placeholder="Paste your function here…"></textarea>
+        </div>
+
+        <div class="pane">
+          <div class="pane-head">
+            <h3>Translated Code</h3>
+            <button id="btn-download" class="secondary sm">Download</button>
+          </div>
+          <textarea id="out" class="editor" spellcheck="false" readonly></textarea>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section id="results" class="card hidden">
+        <div class="row wrap gap">
+          <span class="badge" id="pass-badge">Pass Rate: –</span>
+          <span id="totals" class="muted"></span>
+          <div id="job-meta" class="muted"></div>
+        </div>
+
+        <div class="table-wrap">
+          <table id="cases">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Args</th>
+                <th>Expected</th>
+                <th>Got</th>
+                <th>OK</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
   <script src="/ui/app.js"></script>
 </body>
 </html>
