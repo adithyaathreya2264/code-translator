@@ -62,7 +62,7 @@ Results → History → UI Sidebar
 ---
 
 ## 📂 Project Structure
-
+```
 code-translator/
 │
 ├── api/ 				# FastAPI backend (routes, services, schemas)
@@ -76,7 +76,7 @@ code-translator/
 ├── requirements.txt 	# Python dependencies
 ├── pyproject.toml	 	# Project config
 └── README.md 			# You're here
-
+```
 2️⃣ Create a Virtual Environment
 python -m venv .venv
 .\.venv\Scripts\activate
