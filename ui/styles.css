@@ -121,3 +121,7 @@ td.fail{color:var(--danger); font-weight:700}
   .sidebar{order:2; height:280px}
   .panes{grid-template-columns: 1fr}
 }
+
+#btn-verify {
+  display: none !important;
+}
