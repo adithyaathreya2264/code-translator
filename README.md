@@ -1,13 +1,13 @@
-# 🤖 AI Code Translator & Verifier
+# AI Code Translator & Verifier
 
-### 🌍 Translate • Verify • Store • Reuse
+### Translate • Verify • Store • Reuse
 
 The **AI Code Translator & Verifier** is a full-stack application that uses **OpenAI GPT-4o** to translate code across programming languages (Python, Java, C, C++) and verify the correctness of translations by executing both source and translated code on identical test cases.  
 All translations and reports are automatically stored in **MongoDB Atlas** and displayed through a modern, responsive **web UI**.
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 ✅ **AI-Powered Translation**
 - Uses OpenAI GPT-4o for precise, syntax-aware code translation.  
