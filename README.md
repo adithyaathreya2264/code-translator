@@ -9,24 +9,24 @@ All translations and reports are automatically stored in **MongoDB Atlas** and d
 
 ## Key Features
 
-✅ **AI-Powered Translation**
+**AI-Powered Translation**
 - Uses OpenAI GPT-4o for precise, syntax-aware code translation.  
 - Supports Python ↔ Java ↔ C ↔ C++.
 
-✅ **Automatic Verification**
+**Automatic Verification**
 - Generates random or user-provided test inputs.
 - Executes both source and translated code.
 - Compares outputs and calculates a pass/fail rate.
 
-✅ **MongoDB Atlas Integration**
+**MongoDB Atlas Integration**
 - Every translation (verified or not) is stored with metadata, code, and reports.
 - Retrieve past jobs instantly via the History sidebar.
 
-✅ **Modern Developer UI**
+**Modern Developer UI**
 - Split-view layout for Source (left) and Translated (right).
 - Live translation, verification reports, and a collapsible job history panel.
 
-✅ **Persistent Local Backups**
+**Persistent Local Backups**
 - Each translation creates an `artifacts/<job_id>/` folder for offline reference.
 
 ---
