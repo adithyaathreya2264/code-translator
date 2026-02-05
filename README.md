@@ -31,7 +31,7 @@ All translations and reports are automatically stored in **MongoDB Atlas** and d
 
 ---
 
-## 🧠 System Architecture
+## System Architecture
 
 User (Web UI)
 │
@@ -47,7 +47,7 @@ Results → History → UI Sidebar
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 | Layer | Tools / Libraries |
 |--------|--------------------|
@@ -61,7 +61,7 @@ Results → History → UI Sidebar
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 code-translator/
 │
