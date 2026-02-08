@@ -77,16 +77,16 @@ code-translator/
 ├── pyproject.toml	 	# Project config
 └── README.md 			# You're here
 ```
-2️⃣ Create a Virtual Environment
+2️ Create a Virtual Environment
 python -m venv .venv
 .\.venv\Scripts\activate
 
 
-3️⃣ Install Dependencies
+3️ Install Dependencies
 pip install -r requirements.txt
 
 
-4️⃣ Configure Environment Variables
+4️ Configure Environment Variables
 Create a .env file in the project root:
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx
 MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority
@@ -94,7 +94,7 @@ DB_NAME=code_translator
 COLLECTION_NAME=job_history
 
 
-5️⃣ Run the Development Server
+5️ Run the Development Server
 powershell -ExecutionPolicy Bypass -File .\scripts\dev_server.ps1
 
 🖥️ Using the App
