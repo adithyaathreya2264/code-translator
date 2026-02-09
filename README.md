@@ -97,7 +97,7 @@ COLLECTION_NAME=job_history
 5️ Run the Development Server
 powershell -ExecutionPolicy Bypass -File .\scripts\dev_server.ps1
 
-🖥️ Using the App
+**Using the App**
 Enter Source Code in the left pane.
 Select Source Language and Target Language.
 Enter Function Name (for test generation).
@@ -107,7 +107,7 @@ See translated code on the right and report below.
 All jobs appear in the History sidebar.
 
 
-💾 MongoDB Atlas Storage Schema
+**MongoDB Atlas Storage Schema**
 Each document in job_history:
 {
   "job_id": "20251110-193855-61dfba8f",
@@ -124,7 +124,7 @@ Each document in job_history:
 }
 
 
-🧪 Testing
+Testing
 Run all tests:
 pytest
 
@@ -132,7 +132,7 @@ Or specific modules:
 pytest tests/test_e2e.py
 
 
-Common test files:
+**Common test files:**
 File										Purpose
 test_e2e.py									Tests full translation → verification pipeline
 test_equivalence_local.py					Confirms output equivalence
@@ -140,7 +140,7 @@ test_runners.py								Validates code execution for all languages
 test_testgen.py								Tests random input generation
 conftest.py									Shared pytest setup
 
-🧩 Folder Highlights
+**Folder Highlights**
 Folder					Key Files							Purpose
 api/					main.py, services.py				FastAPI endpoints & logic
 translator/				openai_model.py, prompts.py			AI translation core
@@ -150,7 +150,7 @@ ui/						index.html, app.js, styles.css		Frontend interface
 artifacts/				job folders							Stores source, translated, report
 
 
-🧩 Future Improvements
+**Future Improvements**
 Add more language support (Go, Rust, JavaScript)
 Integrate Monaco/CodeMirror editors for better UX
 Add re-translation & diff view
