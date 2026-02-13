@@ -140,7 +140,7 @@ test_runners.py								Validates code execution for all languages
 test_testgen.py								Tests random input generation
 conftest.py									Shared pytest setup
 
-**Folder Highlights**
+**Folder Highlights**: 
 Folder					Key Files							Purpose
 api/					main.py, services.py				FastAPI endpoints & logic
 translator/				openai_model.py, prompts.py			AI translation core
@@ -150,7 +150,7 @@ ui/						index.html, app.js, styles.css		Frontend interface
 artifacts/				job folders							Stores source, translated, report
 
 
-**Future Improvements**
+**Future Improvements**: 
 Add more language support (Go, Rust, JavaScript)
 Integrate Monaco/CodeMirror editors for better UX
 Add re-translation & diff view
